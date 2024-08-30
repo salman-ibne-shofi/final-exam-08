@@ -102,5 +102,18 @@
 		"tags": ["Science", "Ethics"],
 		"publisher": "Crown Publishing Group",
 		"yearOfPublishing": 2010
+	},
+	{
+		"bookId": "9",
+		"bookName": "Gone Girl",
+		"author": "Gillian Flynn",
+		"image": "https://i.postimg.cc/mZvfW795/kindpng-2592315-1.png",
+		"review": "A gripping psychological thriller that delves into the complexities of a troubled marriage and a high-profile missing person case. Flynn’s sharp writing and unexpected twists keep readers on edge throughout.",
+		"totalPages": 432,
+		"rating": 4.1,
+		"category": "Thriller",
+		"tags": ["Suspense", "Psychological"],
+		"publisher": "Crown Publishing Group",
+		"yearOfPublishing": 2012
 	}
 ]
