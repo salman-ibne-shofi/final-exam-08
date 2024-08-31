@@ -17,15 +17,16 @@ const BookDetails = () => {
 			<div className="card-body w-3/4 p-12">
 				<h2 className="card-title text-5xl">{book.bookName}</h2>
 				<div className="font-sans">
-					<div className="font-medium">By: {book.author}</div>
+					<div className="font-medium">By : {book.author}</div>
 					<div className="border my-3" />
 					<div className="font-medium">{book.category}</div>
 					<div className="border my-3" />
 					<div>
-						<span className="font-bold">Review:</span> {book.review}
+						<span className="font-bold">Review :</span>{" "}
+						{book.review}
 					</div>
 					<div className="flex gap-2">
-						<span className="font-bold">Tag:</span>
+						<span className="font-bold">Tag :</span>
 						<span className="text-[#23BE0A] flex gap-12">
 							{book.tags.map((tag) => (
 								<span>{tag}</span>
@@ -34,21 +35,21 @@ const BookDetails = () => {
 					</div>
 					<div className="border my-3" />
 					<div>
-						Number of Pages:{" "}
+						Number of Pages :
 						<span className="font-semibold">{book.totalPages}</span>
 					</div>
 					<div>
-						Publisher:{" "}
+						Publisher :
 						<span className="font-semibold">{book.publisher}</span>
 					</div>
 					<div>
-						Year of Publishing:{" "}
+						Year of Publishing :
 						<span className="font-semibold">
 							{book.yearOfPublishing}
 						</span>
 					</div>
 					<div>
-						Rating:{" "}
+						Rating :
 						<span className="font-semibold">{book.rating}</span>
 					</div>
 					<div className="card-actions mt-4">

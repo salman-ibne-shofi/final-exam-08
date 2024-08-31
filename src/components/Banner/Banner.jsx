@@ -8,7 +8,7 @@ const Banner = () => {
 					Books to freshen up <br /> your bookshelf
 				</h2>
 				<Link
-					className="bg-[#23BE0A] text-white px-6 py-4 font-bold rounded-md"
+					className="bg-[#23BE0A] text-white px-6 py-4 font-bold font-sans rounded-md"
 					to="/listed"
 				>
 					View The List

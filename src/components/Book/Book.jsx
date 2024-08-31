@@ -10,19 +10,23 @@ const Book = ({ book }) => {
 					<img src={image} />
 				</div>
 				<div className="card-body">
-					<div className="flex gap-12 ml-4 text-[#23BE0A]">
+					<div className="flex gap-12 ml-4 text-[#23BE0A] font-semibold">
 						{book.tags.map((tag) => (
 							<span>{tag}</span>
 						))}
 					</div>
 					<h2 className="card-title text-2xl mt-2">{bookName}</h2>
-					<p>By: {author}</p>
+					<p className="font-semibold font-sans">By: {author}</p>
 					<div className="border-t-2 border-dashed mt-2"></div>
 					<div className="flex justify-between mt-2">
-						<div>{category}</div>
+						<div className="font-semibold font-sans">
+							{category}
+						</div>
 						<div className="flex">
-							<div>{rating}</div>
-							<div className="text-xl ml-2">
+							<div className="font-medium font-sans">
+								{rating}
+							</div>
+							<div className="text-2xl ml-2">
 								<HiOutlineStar />
 							</div>
 						</div>
