@@ -16,7 +16,7 @@ const Navbar = () => {
 	);
 
 	return (
-		<div className="navbar mt-4">
+		<div className="navbar mt-4 font-sans">
 			<div className="navbar-start">
 				<div className="dropdown">
 					<div
