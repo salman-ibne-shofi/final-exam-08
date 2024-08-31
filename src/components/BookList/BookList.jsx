@@ -5,7 +5,7 @@ const BookList = () => {
 	const [books, setBooks] = useState([]);
 
 	useEffect(() => {
-		fetch("books.json")
+		fetch("/public/books.json")
 			.then((res) => res.json())
 			.then((data) => setBooks(data));
 	}, []);
@@ -13,7 +13,7 @@ const BookList = () => {
 	return (
 		<div>
 			<div>
-				<h2 className="text-5xl text-center font-bold mt-16">Books</h2>
+				<h2 className="text-5xl text-center font-bold mt-16">Books Section</h2>
 			</div>
 			<div className="grid grid-cols-3 gap-4">
 				{books.map((book) => (
