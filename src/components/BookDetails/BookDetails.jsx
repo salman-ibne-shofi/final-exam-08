@@ -1,10 +1,20 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const BookDetails = () => {
 	const books = useLoaderData();
 	const { bookId } = useParams();
 	const book = books.find((book) => book.bookId === bookId);
 	console.log(book);
+
+	const handleRead = () => {
+		toast("You read the book!!");
+	};
+	
+    const handleWishlist = () => {
+		toast("Will read soon");
+	};
 
 	return (
 		<div className="card card-side flex items-center">
@@ -60,16 +70,20 @@ const BookDetails = () => {
 					</div>
 					<div className="card-actions mt-4">
 						<Link>
-							<button className="btn my-button mr-4 font-semibold">
+							<button
+								onClick={handleRead}
+								className="btn my-button mr-4 font-semibold"
+							>
 								Read
 							</button>
-							<button className="btn bg-[#50B1C9] text-white font-semibold">
+							<button onClick={handleWishlist} className="btn bg-[#50B1C9] text-white font-semibold">
 								Wishlist
 							</button>
 						</Link>
 					</div>
 				</div>
 			</div>
+			<ToastContainer />
 		</div>
 	);
 };
