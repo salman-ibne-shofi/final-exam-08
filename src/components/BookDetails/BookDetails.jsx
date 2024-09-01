@@ -26,7 +26,7 @@ const BookDetails = () => {
 						{book.review}
 					</div>
 					<div className="flex gap-2">
-						<span className="font-bold">Tag :</span>
+						<span className="font-bold">Tag</span>
 						<span className="text-[#23BE0A] flex gap-12">
 							{book.tags.map((tag) => (
 								<span>{tag}</span>
@@ -35,26 +35,32 @@ const BookDetails = () => {
 					</div>
 					<div className="border my-3" />
 					<div>
-						Number of Pages :
-						<span className="font-semibold">{book.totalPages}</span>
+						Number of Pages:
+						<span className="font-semibold ml-1">
+							{book.totalPages}
+						</span>
 					</div>
 					<div>
-						Publisher :
-						<span className="font-semibold">{book.publisher}</span>
+						Publisher:
+						<span className="font-semibold ml-1">
+							{book.publisher}
+						</span>
 					</div>
 					<div>
-						Year of Publishing :
-						<span className="font-semibold">
+						Year of Publishing:
+						<span className="font-semibold ml-1">
 							{book.yearOfPublishing}
 						</span>
 					</div>
 					<div>
-						Rating :
-						<span className="font-semibold">{book.rating}</span>
+						Rating:
+						<span className="font-semibold ml-1">
+							{book.rating}
+						</span>
 					</div>
 					<div className="card-actions mt-4">
 						<Link>
-							<button className="btn mr-8 font-semibold">
+							<button className="btn my-button mr-4 font-semibold">
 								Read
 							</button>
 							<button className="btn bg-[#50B1C9] text-white font-semibold">
