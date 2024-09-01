@@ -1,6 +1,7 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { saveBook } from "../../utility/localstorage";
 
 const BookDetails = () => {
 	const books = useLoaderData();
@@ -9,10 +10,12 @@ const BookDetails = () => {
 	console.log(book);
 
 	const handleRead = () => {
+		saveBook(bookId);
 		toast("You read the book!!");
 	};
-	
-    const handleWishlist = () => {
+
+	const handleWishlist = () => {
+		saveBook(bookId);
 		toast("Will read soon");
 	};
 
@@ -76,7 +79,10 @@ const BookDetails = () => {
 							>
 								Read
 							</button>
-							<button onClick={handleWishlist} className="btn bg-[#50B1C9] text-white font-semibold">
+							<button
+								onClick={handleWishlist}
+								className="btn bg-[#50B1C9] text-white font-semibold"
+							>
 								Wishlist
 							</button>
 						</Link>
