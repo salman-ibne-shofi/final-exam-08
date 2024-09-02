@@ -49,7 +49,7 @@ const Navbar = () => {
 				<a className="font-bold text-3xl">Book Vibe</a>
 			</div>
 			<div className="navbar-center hidden lg:flex">
-				<ul className="menu menu-horizontal px-1 gap-2">{links}</ul>
+				<ul className="menu menu-horizontal gap-2">{links}</ul>
 			</div>
 			<div className="navbar-end gap-4 ">
 				<a className="btn bg-[#23BE0A] text-white font-semibold">

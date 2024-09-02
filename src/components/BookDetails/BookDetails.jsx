@@ -16,7 +16,7 @@ const BookDetails = () => {
 
 	const handleWishlist = () => {
 		saveBook(bookId);
-		toast("Will read soon");
+		toast("Will read soon!! Added to the wishlist");
 	};
 
 	return (
