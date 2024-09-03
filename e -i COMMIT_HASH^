@@ -1,0 +1,101 @@
+[33mcommit 66e2d07c882dd00ac5ee3d99611c089fe5a759f6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Wed Sep 4 04:43:47 2024 +0600
+
+    connected to the view details button to the booksdetail
+
+[33mcommit fa1de3eb8ff88cade6d23121714c0240961c858b[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Wed Sep 4 01:09:00 2024 +0600
+
+    creat a table for the book details page and increased the padding and image height
+
+[33mcommit 173b6d5465511ad1d4e66b40809a37a40465aa16[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Tue Sep 3 05:06:35 2024 +0600
+
+    local storage connected to the ListedBook section and also created a dynamic card in ListedBook section
+
+[33mcommit 07764686c8c73287f439b61bb52cb9fe7636d49e[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Mon Sep 2 04:54:47 2024 +0600
+
+    set the click item in the local storage
+
+[33mcommit b7f5ed668f68e06bd2bf30a60bcb41c2e5058f50[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Mon Sep 2 03:44:12 2024 +0600
+
+    set react toastify in the read or wishlist button both
+
+[33mcommit 06a05aa319bfa4b37a79635effe90a300dda36bd[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Mon Sep 2 03:09:03 2024 +0600
+
+    changed the banner section image and background size also fix the reat button border related issues and give margine bottom in hole site root section
+
+[33mcommit 48d5f51c8e4ca002aa2fee300fa04abed7470579[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Sun Sep 1 04:56:15 2024 +0600
+
+    the home page and the total site font design re-sized as the figma design required
+
+[33mcommit 8b051fd57ae08527f5f4c13b6a3412a302219240[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Sun Sep 1 04:42:21 2024 +0600
+
+    set book details section successfully without the read and the wishlist button activate and also done some font esign related work in the project
+
+[33mcommit 090ec263ea10550a6666e952fbbca37619bb6f6b[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Sat Aug 31 09:08:01 2024 +0600
+
+    make the booklist card clickable and take me to the bookdetails section
+
+[33mcommit 6bdf7c510c86836706ca4afbc2a3a19fbff117df[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Sat Aug 31 05:40:39 2024 +0600
+
+    view the list button functionalities work done properly
+
+[33mcommit e43f6757eaf530e3433bc5a113c6ad7b4803e6f2[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Sat Aug 31 05:17:11 2024 +0600
+
+    book card padding changed
+
+[33mcommit 5373734340236328d5a221a377f7eba320782f83[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Sat Aug 31 05:13:21 2024 +0600
+
+    one new json book data added in the book.json file
+
+[33mcommit f90fa3b2cacad4a6412e91119eaa6756a79ec672[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Sat Aug 31 05:06:56 2024 +0600
+
+    set the booklist section and display all the books from json data to user interface
+
+[33mcommit 0381ea9afef1681d1984e801ad12a08a44754a88[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Sat Aug 31 01:07:00 2024 +0600
+
+    load data for the page
+
+[33mcommit c73d6bb4c96751edd6544094d505d74fc7b77d8c[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Fri Aug 30 22:58:05 2024 +0600
+
+    set banner section primarily done
+
+[33mcommit d5f5669e005638a1c670a27163a52e89b2e1d26e[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Fri Aug 30 18:03:05 2024 +0600
+
+    set a navbar for book vibe
+
+[33mcommit 0f2e9b51c71e347f1355db7eef1008a3d0757680[m
+Author: salman-ibne-shofi <salmanibnshafi@gmail.com>
+Date:   Thu Aug 29 16:12:35 2024 +0600
+
+    project setup with react router, tailwind css and daisyUI
