@@ -3,9 +3,13 @@ import { getReadBook, getStoredBook } from "../../utility/localstorage";
 import { useEffect, useState } from "react";
 import { LuUsers } from "react-icons/lu";
 import { RiPagesLine } from "react-icons/ri";
+import { IoLocationOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
-const ListedBooks = () => {
+const ListedBooks = ({ book }) => {
 	const booksLocal = getStoredBook();
+	const booksRead = getReadBook();
+
 	const [allBooks, setAllBooks] = useState([]);
 
 	useEffect(() => {
@@ -36,7 +40,7 @@ const ListedBooks = () => {
 				</div>
 				<ul
 					tabIndex={0}
-					className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+					className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow font-sans"
 				>
 					<li>
 						<a>Rating</a>
@@ -49,44 +53,170 @@ const ListedBooks = () => {
 					</li>
 				</ul>
 			</div>
-			{allBooks
-				.filter((book) => booksLocal.includes(book.bookId))
-				.map((book) => {
-					return (
-						<div className="card card-side border mt-8 p-5">
-							<div className="p-6 bg-base-200 border rounded-2xl">
-								<img src={book.image} />
-							</div>
-							<div className="card-body">
-								<h2 className="card-title">{book.bookName}</h2>
-								<p>By : {book.author}</p>
-								<p>
-									<span className="font-bold">Tag</span>
-									{book.tags}
-								</p>
-								<div className="flex gap-6">
-									<div className="flex gap-2">
-										<span className="text-xl">
-											<LuUsers />
-										</span>
-										Publisher: {book.publisher}
+			<div role="tablist" className="tabs tabs-lifted font-sans">
+				<input
+					type="radio"
+					name="my_tabs_2"
+					role="tab"
+					className="tab"
+					aria-label="Read Books"
+				/>
+				<div
+					role="tabpanel"
+					className="tab-content border-base-300 rounded-box p-6"
+				>
+					{allBooks
+						.filter((book) => booksRead.includes(book.bookId))
+						.map((book) => {
+							return (
+								<div className="card card-side mt-8 p-5">
+									<div className="flex items-center justify-center w-1/5 bg-base-200 border rounded-2xl">
+										<img src={book.image} />
 									</div>
-									<div className="flex gap-2">
-										<span className="text-xl">
-											<RiPagesLine />
-										</span>
-										Page {book.totalPages}
+									<div className="card-body font-sans">
+										<h2 className="card-title font-serif text-2xl">
+											{book.bookName}
+										</h2>
+										<p className="my-2">
+											By : {book.author}
+										</p>
+										<div className="flex gap-6">
+											<div className="font-bold flex gap-2 my-2">
+												Tag
+												<span className="text-[#23BE0A] flex gap-4">
+													{book.tags.map((tag) => (
+														<span>{tag}</span>
+													))}
+												</span>
+											</div>
+											<div className="flex gap-1 my-2">
+												<span className="text-xl">
+													<IoLocationOutline />
+												</span>
+												<span>
+													Year of Publishing:
+													{book.yearOfPublishing}
+												</span>
+											</div>
+										</div>
+										<div className="flex gap-6">
+											<div className="flex gap-2">
+												<span className="text-xl">
+													<LuUsers />
+												</span>
+												Publisher: {book.publisher}
+											</div>
+											<div className="flex gap-2">
+												<span className="text-xl">
+													<RiPagesLine />
+												</span>
+												Page {book.totalPages}
+											</div>
+										</div>
+										<div className="border my-4"></div>
+										<div className="flex gap-4 font-sans">
+											<div className="flex gap-4">
+												<span className="p-3 text-[#328EFF] bg-[#328EFF15] rounded-full">
+													Category: {book.category}
+												</span>
+												<span className="p-3 text-[#FFAC33] bg-[#FFAC3315] rounded-full">
+													Rating: {book.rating}
+												</span>
+											</div>
+											<Link to={`/book/${book.bookId}`}>
+												<button className="btn bg-[#23BE0A] text-white rounded-full font-sans font-medium">
+													View Details
+												</button>
+											</Link>
+										</div>
 									</div>
 								</div>
-								<div className="card-actions">
-									<button className="btn bg-[#23BE0A] text-white rounded-full font-sans">
-										View Details
-									</button>
+							);
+						})}
+				</div>
+
+				<input
+					type="radio"
+					name="my_tabs_2"
+					role="tab"
+					className="tab"
+					aria-label="Wishlist Books"
+					defaultChecked
+				/>
+				<div
+					role="tabpanel"
+					className="tab-content bg-base-100 border-base-300 rounded-box p-6"
+				>
+					{allBooks
+						.filter((book) => booksLocal.includes(book.bookId))
+						.map((book) => {
+							return (
+								<div className="card card-side mt-8 p-6">
+									<div className="flex items-center justify-center w-1/5 bg-base-200 border rounded-2xl">
+										<img src={book.image} />
+									</div>
+									<div className="card-body font-sans">
+										<h2 className="card-title font-serif text-2xl">
+											{book.bookName}
+										</h2>
+										<p className="my-2">
+											By : {book.author}
+										</p>
+										<div className="flex gap-6">
+											<div className="font-bold flex gap-2 my-2">
+												Tag
+												<span className="text-[#23BE0A] flex gap-4">
+													{book.tags.map((tag) => (
+														<span>{tag}</span>
+													))}
+												</span>
+											</div>
+											<div className="flex gap-1 my-2">
+												<span className="text-xl">
+													<IoLocationOutline />
+												</span>
+												<span>
+													Year of Publishing:
+													{book.yearOfPublishing}
+												</span>
+											</div>
+										</div>
+										<div className="flex gap-6">
+											<div className="flex gap-2">
+												<span className="text-xl">
+													<LuUsers />
+												</span>
+												Publisher: {book.publisher}
+											</div>
+											<div className="flex gap-2">
+												<span className="text-xl">
+													<RiPagesLine />
+												</span>
+												Page {book.totalPages}
+											</div>
+										</div>
+										<div className="border my-4"></div>
+										<div className="flex gap-4 font-sans">
+											<div className="flex gap-4">
+												<span className="p-3 text-[#328EFF] bg-[#328EFF15] rounded-full">
+													Category: {book.category}
+												</span>
+												<span className="p-3 text-[#FFAC33] bg-[#FFAC3315] rounded-full">
+													Rating: {book.rating}
+												</span>
+											</div>
+											<Link to={`/book/${book.bookId}`}>
+												<button className="btn bg-[#23BE0A] text-white rounded-full font-sans font-medium">
+													View Details
+												</button>
+											</Link>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-					);
-				})}
+							);
+						})}
+				</div>
+			</div>
 		</div>
 	);
 };
