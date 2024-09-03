@@ -1,5 +1,5 @@
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { getStoredBook } from "../../utility/localstorage";
+import { getReadBook, getStoredBook } from "../../utility/localstorage";
 import { useEffect, useState } from "react";
 import { LuUsers } from "react-icons/lu";
 import { RiPagesLine } from "react-icons/ri";
@@ -61,7 +61,7 @@ const ListedBooks = () => {
 								<h2 className="card-title">{book.bookName}</h2>
 								<p>By : {book.author}</p>
 								<p>
-									<span className="font-bold">Tag</span>{" "}
+									<span className="font-bold">Tag</span>
 									{book.tags}
 								</p>
 								<div className="flex gap-6">
