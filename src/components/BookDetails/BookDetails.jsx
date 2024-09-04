@@ -33,33 +33,35 @@ const BookDetails = () => {
 	};
 
 	return (
-		<div className="card card-side flex items-center">
-			<div className="bg-base-200 p-16 rounded-2xl">
+		<div className="card card-side flex flex-col md:flex-row items-center">
+			<div className="bg-base-200 p-8 md:p-16 rounded-2xl">
 				<img
 					src={book.image}
 					style={{ width: "280px", height: "355px" }}
 				/>
 			</div>
-			<div className="card-body w-3/4 p-20">
-				<h2 className="card-title text-5xl">{book.bookName}</h2>
-				<div className="font-sans">
+			<div className="card-body w-full md:w-3/4 p-4 md:p-20">
+				<h2 className="card-title text-3xl md:text-5xl">
+					{book.bookName}
+				</h2>
+				<div className="font-sans mt-4 md:mt-0">
 					<div className="font-medium">By : {book.author}</div>
-					<div className="border my-3" />
+					<div className="border my-2 md:my-3" />
 					<div className="font-medium">{book.category}</div>
-					<div className="border my-3" />
+					<div className="border my-2 md:my-3" />
 					<div>
 						<span className="font-bold">Review : </span>
 						{book.review}
 					</div>
-					<div className="flex gap-2">
+					<div className="flex flex-wrap gap-2 mt-2 md:mt-4">
 						<span className="font-bold">Tag</span>
-						<span className="text-[#23BE0A] flex gap-12">
+						<span className="text-[#23BE0A] flex flex-wrap gap-4 md:gap-12">
 							{book.tags.map((tag) => (
 								<span>{tag}</span>
 							))}
 						</span>
 					</div>
-					<div className="border mt-3" />
+					<div className="border mt-2 md:mt-3" />
 					<table className="table">
 						<tbody>
 							<tr>
@@ -90,7 +92,7 @@ const BookDetails = () => {
 							</tr>
 						</tbody>
 					</table>
-					<div className="card-actions mt-4">
+					<div className="card-actions mt-4 flex flex-col md:flex-row gap-2">
 						<Link>
 							<button
 								onClick={handleRead}

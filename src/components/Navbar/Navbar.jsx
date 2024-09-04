@@ -47,17 +47,17 @@ const Navbar = () => {
 					</div>
 					<ul
 						tabIndex={0}
-						className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow"
+						className="menu menu-sm dropdown-content mt-3 w-52 p-2 shadow bg-base-100 rounded-box z-[1]"
 					>
 						{links}
 					</ul>
 				</div>
-				<a className="font-bold text-3xl">Book Vibe</a>
+				<a className="font-bold text-2xl0 lg:text-3xl">Book Vibe</a>
 			</div>
 			<div className="navbar-center hidden lg:flex">
-				<ul className="menu menu-horizontal gap-2">{links}</ul>
+				<ul className="menu menu-horizontal gap-4">{links}</ul>
 			</div>
-			<div className="navbar-end gap-4 ">
+			<div className="navbar-end flex gap-2 lg:gap-4 ">
 				<a className="btn bg-[#23BE0A] text-white font-semibold">
 					Sign In
 				</a>

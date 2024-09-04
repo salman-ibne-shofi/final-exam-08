@@ -6,23 +6,25 @@ const Book = ({ book }) => {
 	return (
 		<Link to={`/book/${bookId}`}>
 			<div className="card border mt-8">
-				<div className="bg-[#F3F3F3] flex justify-center p-12 mt-4 mx-4 rounded-2xl">
+				<div className="bg-[#F3F3F3] flex justify-center p-8 md:p-12 mt-4 mx-2 md:mx-4 rounded-2xl">
 					<img src={image} />
 				</div>
-				<div className="card-body">
-					<div className="flex gap-12 ml-4 text-[#23BE0A] font-semibold">
+				<div className="card-body p-4 md:p-6">
+					<div className="flex flex-wrap gap-4 md:gap-12 ml-0 md:ml-4 text-[#23BE0A] font-semibold">
 						{book.tags.map((tag) => (
 							<span>{tag}</span>
 						))}
 					</div>
-					<h2 className="card-title text-2xl mt-2">{bookName}</h2>
+					<h2 className="card-title text-xl md:text-2xl mt-2">
+						{bookName}
+					</h2>
 					<p className="font-semibold font-sans">By: {author}</p>
 					<div className="border-t-2 border-dashed mt-2"></div>
-					<div className="flex justify-between mt-2">
+					<div className="flex flex-col md:flex-row justify-between mt-2">
 						<div className="font-semibold font-sans">
 							{category}
 						</div>
-						<div className="flex">
+						<div className="flex items-center mt-2 md:mt-0">
 							<div className="font-medium font-sans">
 								{rating}
 							</div>
