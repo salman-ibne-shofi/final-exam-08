@@ -17,7 +17,7 @@ const BookDetails = () => {
 		if (saveReadBook(bookId)) {
 			toast("You read the book!!");
 		} else {
-			toast("Oops!! This book is already in your read list!");
+			toast("Oops!! You already read this book!");
 		}
 	};
 
@@ -28,7 +28,7 @@ const BookDetails = () => {
 			toast("Added to the wishlist");
 			saveBook(bookId);
 		} else {
-			toast("Oops! Book already read or added to wishlist");
+			toast("Oops!! Book already read or added to wishlist");
 		}
 	};
 
