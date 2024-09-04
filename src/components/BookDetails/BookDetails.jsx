@@ -24,7 +24,7 @@ const BookDetails = () => {
 	const handleWishlist = () => {
 		const books = getReadBook();
 
-		if (!books[bookId] && saveBook(bookId)) {
+		if (!books.includes(bookId) && saveBook(bookId)) {
 			toast("Added to the wishlist");
 			saveBook(bookId);
 		} else {
