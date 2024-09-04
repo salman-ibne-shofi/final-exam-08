@@ -24,14 +24,14 @@ const ListedBooks = ({ book }) => {
 
 	return (
 		<div>
-			<h2 className="bg-base-200 p-8 rounded-2xl flex justify-center font-bold text-4xl font-sans mt-4">
+			<h2 className="bg-base-200 p-8 rounded-2xl flex justify-center font-bold text-4xl font-sans mt-4 mb-8">
 				Books
 			</h2>
 			<div className="dropdown flex justify-center">
 				<div
 					tabIndex={0}
 					role="button"
-					className="btn mt-6 font-sans text-lg text-white bg-[#23BE0A]"
+					className="btn px-8 font-sans text-lg text-white bg-[#23BE0A] absolute"
 				>
 					Sort By
 					<span className="text-2xl">
@@ -40,7 +40,7 @@ const ListedBooks = ({ book }) => {
 				</div>
 				<ul
 					tabIndex={0}
-					className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow font-sans"
+					className="dropdown-content flex items-center menu bg-base-100 rounded-box shadow font-sans absolute top-20"
 				>
 					<li>
 						<a>Rating</a>
