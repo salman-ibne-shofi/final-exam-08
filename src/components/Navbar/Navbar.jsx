@@ -54,17 +54,17 @@ const Navbar = () => {
 				</div>
 				<a className="font-bold text-2xl0 lg:text-3xl">Book Vibe</a>
 			</div>
-			<div className="navbar-center hidden lg:flex">
+			<div className="navbar-end hidden lg:flex">
 				<ul className="menu menu-horizontal gap-4">{links}</ul>
 			</div>
-			<div className="navbar-end flex gap-2 lg:gap-4 ">
+			{/* <div className="navbar-end flex gap-2 lg:gap-4 ">
 				<a className="btn bg-[#23BE0A] text-white font-semibold">
 					Sign In
 				</a>
 				<a className="btn bg-[#59C6D2] text-white font-semibold">
 					Sign Up
 				</a>
-			</div>
+			</div> */}
 		</div>
 	);
 };
